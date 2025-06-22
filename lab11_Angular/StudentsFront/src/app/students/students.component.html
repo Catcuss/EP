@@ -1,0 +1,30 @@
+<h2>New student</h2>
+<div>
+    <label>Index:
+        <input #studIndex />
+    </label>
+    <label>First name:
+        <input #studFirstName />
+    </label>
+    <label>Last name:
+        <input #studLastName />
+    </label>
+    <button (click)="create(+studIndex.value, studFirstName.value, 
+studLastName.value); studIndex.value=''; studFirstName.value=''; 
+studLastName.value=''">
+        Add
+    </button>
+</div>
+<h2>List of students</h2>
+<ul>
+    @for (student of students; track student.id) {
+    <li>
+        <button title="Delete" (click)="delete(student)">Delete</button>
+        &nbsp; <a routerLink="/student-detail/{{student.id}}">
+            <span>{{student.index}}</span>
+        </a>
+        &nbsp;<span>{{student.lastName}}</span>
+        &nbsp;<span>{{student.firstName}}</span>
+    </li>
+    }
+</ul>
