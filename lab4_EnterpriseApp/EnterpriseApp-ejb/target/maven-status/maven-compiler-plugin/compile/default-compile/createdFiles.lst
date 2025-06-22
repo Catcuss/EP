@@ -1,0 +1,4 @@
+lab\ejb\NewsItem.class
+lab\ejb\NewsItemFacade.class
+lab\ejb\NewsItemFacadeLocal.class
+lab\ejb\NewsMDB.class
